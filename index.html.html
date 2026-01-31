@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Suman GFX - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1 id="site-title">JS Suman GFX - Portfolio</h1>
+        <div class="language-switch">
+            <button onclick="setLanguage('en')">EN</button>
+            <button onclick="setLanguage('bn')">BN</button>
+            <button onclick="setLanguage('hi')">HI</button>
+        </div>
+    </header>
+
+    <section id="portfolio">
+        <h2 id="portfolio-title">Portfolio</h2>
+        <div id="portfolio-grid" class="grid">
+            <!-- Dummy portfolio images; in real use, load from assets or localStorage -->
+            <img src="assets/portfolio1.jpg" alt="Portfolio 1">
+            <img src="assets/portfolio2.jpg" alt="Portfolio 2">
+            <img src="assets/portfolio3.jpg" alt="Portfolio 3">
+        </div>
+    </section>
+
+    <section id="upload-order">
+        <h2 id="upload-title">Upload Images for Order</h2>
+        <input type="file" id="image-upload" multiple accept="image/*">
+        <div id="image-preview"></div>
+        <button id="remove-images" onclick="removeImages()">Remove All</button>
+        <form id="order-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="tel" id="phone" placeholder="Phone Number" required>
+            <textarea id="message" placeholder="Order Details"></textarea>
+            <button type="submit" id="order-btn">Order via WhatsApp</button>
+        </form>
+    </section>
+
+    <section id="reviews">
+        <h2 id="reviews-title">Reviews</h2>
+        <div id="review-list"></div>
+        <form id="review-form">
+            <input type="text" id="reviewer-name" placeholder="Your Name" required>
+            <textarea id="review-text" placeholder="Your Review" required></textarea>
+            <button type="submit">Submit Review</button>
+        </form>
+    </section>
+
+    <section id="chat">
+        <h2 id="chat-title">Chat with Us</h2>
+        <div id="chat-window"></div>
+        <input type="text" id="chat-input" placeholder="Type a message...">
+        <button onclick="sendMessage()">Send</button>
+    </section>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
